@@ -6,7 +6,7 @@
     <title>RoboCamp 2026 - ¡Aprende Arduino y Robótica!</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Fredoka para diseño infantil/juvenil y Fira Code para el código -->
+    <!-- Google Fonts: Fredoka para un tono juvenil e interactivo, y Fira Code para el código -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     <!-- FontAwesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,7 +24,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        /* Animación flotante para el robot cabecera */
+        /* Animaciones para hacer la web más dinámica */
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-10px) rotate(2deg); }
@@ -32,7 +32,6 @@
         .float-animation {
             animation: float 4s ease-in-out infinite;
         }
-        /* Rotación de ruedas */
         @keyframes spin-slow {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
@@ -44,7 +43,7 @@
 </head>
 <body class="text-slate-100 min-h-screen flex flex-col selection:bg-yellow-400 selection:text-slate-900">
 
-    <!-- CABECERA -->
+    <!-- CABECERA PRINCIPAL -->
     <header class="relative overflow-hidden bg-slate-900 border-b-4 border-yellow-400 py-8 px-4 shadow-2xl">
         <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -58,7 +57,7 @@
                     ¡Controla tu <span class="rainbow-text">Súper Robot</span>!
                 </h1>
                 <p class="text-slate-300 text-lg md:text-xl mt-3 max-w-xl">
-                    Conviértete en programador/a este verano. Mira cómo funciona el cerebro de tu coche robot con estos 3 niveles de poder.
+                    Conviértete en programador/a este verano. Descubre el funcionamiento de tu coche robot con estos 3 niveles de código.
                 </p>
             </div>
             <div class="flex items-center justify-center float-animation">
@@ -68,21 +67,21 @@
                     </div>
                     <span class="text-5xl">🤖</span>
                     <h3 class="text-xl font-bold mt-2 text-yellow-300">Robotito Arduino</h3>
-                    <p class="text-xs text-slate-400 mt-1">Sigue las instrucciones de abajo para cambiar sus superpoderes.</p>
+                    <p class="text-xs text-slate-400 mt-1">Usa el simulador inferior para interactuar con su software.</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- CUERPO PRINCIPAL -->
+    <!-- CONTENEDOR PRINCIPAL -->
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
         
         <!-- COLUMNA IZQUIERDA: CÓDIGOS Y EXPLICACIONES (7 COLS) -->
         <section class="lg:col-span-7 flex flex-col gap-6">
             
-            <!-- SELECTOR DE PESTAÑAS -->
+            <!-- SELECTOR DE NIVELES (Pestañas estilo videojuego) -->
             <div class="bg-slate-900 p-3 rounded-2xl border-2 border-slate-800 shadow-lg">
-                <h2 class="text-xs uppercase font-bold text-slate-400 tracking-wider mb-2.5 px-2">Selecciona tu Nivel de Programador</h2>
+                <h2 class="text-xs uppercase font-bold text-slate-400 tracking-wider mb-2.5 px-2">Selecciona tu Nivel de Programación</h2>
                 <div class="grid grid-cols-3 gap-2">
                     
                     <!-- Nivel 1 -->
@@ -93,14 +92,14 @@
                     </button>
                     
                     <!-- Nivel 2 -->
-                    <button onclick="cambiarNivel(2)" id="btn-nivel-2" class="tab-btn p-3 rounded-xl transition-all duration-300 flex flex-col items-center gap-1 border-2 border-transparent hover:border-slate-750 text-slate-450 hover:text-slate-200">
+                    <button onclick="cambiarNivel(2)" id="btn-nivel-2" class="tab-btn p-3 rounded-xl transition-all duration-300 flex flex-col items-center gap-1 border-2 border-transparent hover:border-slate-700 text-slate-400 hover:text-slate-200">
                         <span class="text-2xl">💬</span>
                         <span class="font-bold text-sm">Nivel 2</span>
                         <span class="text-[10px] uppercase font-bold tracking-tight opacity-80">Con Mensajes</span>
                     </button>
                     
                     <!-- Nivel 3 -->
-                    <button onclick="cambiarNivel(3)" id="btn-nivel-3" class="tab-btn p-3 rounded-xl transition-all duration-300 flex flex-col items-center gap-1 border-2 border-transparent hover:border-slate-750 text-slate-450 hover:text-slate-200">
+                    <button onclick="cambiarNivel(3)" id="btn-nivel-3" class="tab-btn p-3 rounded-xl transition-all duration-300 flex flex-col items-center gap-1 border-2 border-transparent hover:border-purple-455 text-slate-400 hover:text-slate-200">
                         <span class="text-2xl">🦇</span>
                         <span class="font-bold text-sm">Nivel 3</span>
                         <span class="text-[10px] uppercase font-bold tracking-tight opacity-80">Súper Sensor</span>
@@ -306,13 +305,12 @@
 
     <!-- PIE DE PÁGINA -->
     <footer class="bg-slate-950 border-t-2 border-slate-800 py-6 text-center text-xs text-slate-500">
-        <p>👨‍🏫 Creado con ❤️ por el profesor este verano. ¡A programar se ha dicho!</p>
+        <p>👨‍🏫 Creado con ❤️ para las clases de este verano. ¡A programar se ha dicho!</p>
         <p class="mt-1">Compatible con Arduino Uno, Nano y Puente H L298N o Shield L293D.</p>
     </footer>
 
     <!-- LOGICA DEL SIMULADOR -->
     <script>
-        // Los códigos cargados desde los archivos
         const codigos = {
             1: {
                 titulo: "Código sencillo.txt",
@@ -320,56 +318,7 @@
                 badge: "Principiante (Nivel 1)",
                 color: "green",
                 truco: "El Puente H es como un interruptor mágico que deja pasar la electricidad hacia adelante o hacia atrás para que las ruedas giren.",
-                codigo: `// Pines del puente H
-const int motorA1 = 2;
-const int motorA2 = 3;
-const int motorB1 = 4;
-const int motorB2 = 5;
-
-void setup() {
-  Serial.begin(9600);
-
-  pinMode(motorA1, OUTPUT); // Se les pone como salida
-  pinMode(motorA2, OUTPUT);
-  pinMode(motorB1, OUTPUT);
-  pinMode(motorB2, OUTPUT);
-
-  detener();
-}
-
-void loop() {
-
-  if (Serial.available()) {
-    char c = Serial.read();
-
-    if (c == 'a') avanzar(); //configuración entradas monitor serial
-    if (c == 'r') retroceder();
-    if (c == 'p') detener();
-  }
-}
-
-// ---------------- FUNCIONES ----------------
-
-void avanzar() {
-  digitalWrite(motorA1, HIGH);
-  digitalWrite(motorA2, LOW);
-  digitalWrite(motorB1, HIGH);
-  digitalWrite(motorB2, LOW);
-}
-
-void retroceder() {
-  digitalWrite(motorA1, LOW);
-  digitalWrite(motorA2, HIGH);
-  digitalWrite(motorB1, LOW);
-  digitalWrite(motorB2, HIGH);
-}
-
-void detener() {
-  digitalWrite(motorA1, LOW);
-  digitalWrite(motorA2, LOW);
-  digitalWrite(motorB1, LOW);
-  digitalWrite(motorB2, LOW);
-}`
+                codigo: `// Pines del puente H\nconst int motorA1 = 2;\nconst int motorA2 = 3;\nconst int motorB1 = 4;\nconst int motorB2 = 5;\n\nvoid setup() {\n  Serial.begin(9600);\n\n  pinMode(motorA1, OUTPUT); // Se les pone como salida\n  pinMode(motorA2, OUTPUT);\n  pinMode(motorB1, OUTPUT);\n  pinMode(motorB2, OUTPUT);\n\n  detener();\n}\n\nvoid loop() {\n\n  if (Serial.available()) {\n    char c = Serial.read();\n\n    if (c == 'a') avanzar(); //configuración entradas monitor serial\n    if (c == 'r') retroceder();\n    if (c == 'p') detener();\n  }\n}\n\n// ---------------- FUNCIONES ----------------\n\nvoid avanzar() {\n  digitalWrite(motorA1, HIGH);\n  digitalWrite(motorA2, LOW);\n  digitalWrite(motorB1, HIGH);\n  digitalWrite(motorB2, LOW);\n}\n\nvoid retroceder() {\n  digitalWrite(motorA1, LOW);\n  digitalWrite(motorA2, HIGH);\n  digitalWrite(motorB1, LOW);\n  digitalWrite(motorB2, HIGH);\n}\n\nvoid detener() {\n  digitalWrite(motorA1, LOW);\n  digitalWrite(motorA2, LOW);\n  digitalWrite(motorB1, LOW);\n  digitalWrite(motorB2, LOW);\n}`
             },
             2: {
                 titulo: "Código con mensajes.txt",
@@ -377,56 +326,7 @@ void detener() {
                 badge: "Intermedio (Nivel 2)",
                 color: "blue",
                 truco: "Usamos 'toupper()' para convertir las letras a mayúsculas. Así no importa si escribes 'a' o 'A', ¡funcionará igual de bien!",
-                codigo: `// Pines del puente H
-const int motorA1 = 2;
-const int motorA2 = 3;
-const int motorB1 = 4;
-const int motorB2 = 5;
-
-void setup() {
-  Serial.begin(9600);
-  pinMode(motorA1, OUTPUT);
-  pinMode(motorA2, OUTPUT);
-  pinMode(motorB1, OUTPUT);
-  pinMode(motorB2, OUTPUT);
-  detener();
-}
-
-void loop() {
-  if (Serial.available()) {
-    char c = Serial.read();
-    c = toupper(c); // Convierte a mayúscula automáticamente
-
-    if (c == 'A') avanzar();
-    if (c == 'R') retroceder();
-    if (c == 'P') detener();
-  }
-}
-
-// ---------------- FUNCIONES ----------------
-void avanzar() {
-  digitalWrite(motorA1, HIGH);
-  digitalWrite(motorA2, LOW);
-  digitalWrite(motorB1, HIGH);
-  digitalWrite(motorB2, LOW);
-  Serial.println(">> Avanzando");
-}
-
-void retroceder() {
-  digitalWrite(motorA1, LOW);
-  digitalWrite(motorA2, HIGH);
-  digitalWrite(motorB1, LOW);
-  digitalWrite(motorB2, HIGH);
-  Serial.println(">> Retrocediendo");
-}
-
-void detener() {
-  digitalWrite(motorA1, LOW);
-  digitalWrite(motorA2, LOW);
-  digitalWrite(motorB1, LOW);
-  digitalWrite(motorB2, LOW);
-  Serial.println(">> Detenido");
-}`
+                codigo: `// Pines del puente H\nconst int motorA1 = 2;\nconst int motorA2 = 3;\nconst int motorB1 = 4;\nconst int motorB2 = 5;\n\nvoid setup() {\n  Serial.begin(9600);\n  pinMode(motorA1, OUTPUT);\n  pinMode(motorA2, OUTPUT);\n  pinMode(motorB1, OUTPUT);\n  pinMode(motorB2, OUTPUT);\n  detener();\n}\n\nvoid loop() {\n  if (Serial.available()) {\n    char c = Serial.read();\n    c = toupper(c); // Convierte a mayúscula automáticamente\n\n    if (c == 'A') avanzar();\n    if (c == 'R') retroceder();\n    if (c == 'P') detener();\n  }\n}\n\n// ---------------- FUNCIONES ----------------\nvoid avanzar() {\n  digitalWrite(motorA1, HIGH);\n  digitalWrite(motorA2, LOW);\n  digitalWrite(motorB1, HIGH);\n  digitalWrite(motorB2, LOW);\n  Serial.println(">> Avanzando");\n}\n\nvoid retroceder() {\n  digitalWrite(motorA1, LOW);\n  digitalWrite(motorA2, HIGH);\n  digitalWrite(motorB1, LOW);\n  digitalWrite(motorB2, HIGH);\n  Serial.println(">> Retrocediendo");\n}\n\nvoid detener() {\n  digitalWrite(motorA1, LOW);\n  digitalWrite(motorA2, LOW);\n  digitalWrite(motorB1, LOW);\n  digitalWrite(motorB2, LOW);\n  Serial.println(">> Detenido");\n}`
             },
             3: {
                 titulo: "Código con sensor.txt",
@@ -434,80 +334,7 @@ void detener() {
                 badge: "Experto (Nivel 3)",
                 color: "purple",
                 truco: "Utilizamos 'analogWrite(pin, velocidad)' en vez de 'digitalWrite'. Esto nos permite regular cuánta energía mandamos a los motores (de 0 a 255) para controlar su velocidad como en un acelerador.",
-                codigo: `// Pines del sensor ultrasónico 
-const int trigPin = 9;
-const int echoPin = 10;
-
-// Pines del puente H para los motores
-const int motorA1 = 2;
-const int motorA2 = 3;
-const int motorB1 = 4;
-const int motorB2 = 5;
-
-// Velocidades
-int vel1 = 120;   // velocidad baja adelante
-int vel2 = 180;   // velocidad media adelante
-int vel3 = 255;   // velocidad alta adelante
-int velAtras = 120; // única velocidad atrás
-
-int velActual = 150;
-
-long duracion;
-int distancia;
-
-void setup() {
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-
-  pinMode(motorA1, OUTPUT);
-  pinMode(motorA2, OUTPUT);
-  pinMode(motorB1, OUTPUT);
-  pinMode(motorB2, OUTPUT);
-
-  Serial.begin(9600); // Bluetooth también usa Serial
-}
-
-void loop() {
-
-  // --- LECTURA ULTRASONIDO ---
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-
-  duracion = pulseIn(echoPin, HIGH);
-  distancia = duracion * 0.034 / 2;
-
-  Serial.print("Distancia: ");
-  Serial.print(distancia);
-  Serial.println(" cm");
-
-  // --- CONTROL POR BLUETOOTH ---
-  if (Serial.available()) {
-    char c = Serial.read();
-
-    // Velocidades adelante
-    if (c == '1') velActual = vel1;
-    if (c == '2') velActual = vel2;
-    if (c == '3') velActual = vel3;
-
-    // Velocidad atrás
-    if (c == '4') velActual = velAtras;
-
-    // Movimientos
-    if (c == 'a') avanzar();
-    if (c == 'p') detener();
-    if (c == 'r') retroceder();
-    if (c == 'i') izquierda();
-    if (c == 'd') derecha();
-  }
-
-  // Seguridad automática
-  if (distancia <= 5 && distancia > 0) {
-    detener();
-  }
-}`
+                codigo: `// Pines del sensor ultrasónico \nconst int trigPin = 9;\nconst int echoPin = 10;\n\n// Pines del puente H para los motores\nconst int motorA1 = 2;\nconst int motorA2 = 3;\nconst int motorB1 = 4;\nconst int motorB2 = 5;\n\n// Velocidades\nint vel1 = 120;   // velocidad baja adelante\nint vel2 = 180;   // velocidad media adelante\nint vel3 = 255;   // velocidad alta adelante\nint velAtras = 120; // única velocidad atrás\n\nint velActual = 150;\n\nlong duracion;\nint distancia;\n\nvoid setup() {\n  pinMode(trigPin, OUTPUT);\n  pinMode(echoPin, INPUT);\n\n  pinMode(motorA1, OUTPUT);\n  pinMode(motorA2, OUTPUT);\n  pinMode(motorB1, OUTPUT);\n  pinMode(motorB2, OUTPUT);\n\n  Serial.begin(9600); // Bluetooth también usa Serial\n}\n\nvoid loop() {\n\n  // --- LECTURA ULTRASONIDO ---\n  digitalWrite(trigPin, LOW);\n  delayMicroseconds(2);\n  digitalWrite(trigPin, HIGH);\n  delayMicroseconds(10);\n  digitalWrite(trigPin, LOW);\n\n  duracion = pulseIn(echoPin, HIGH);\n  distancia = duracion * 0.034 / 2;\n\n  Serial.print("Distancia: ");\n  Serial.print(distancia);\n  Serial.println(" cm");\n\n  // --- CONTROL POR BLUETOOTH ---\n  if (Serial.available()) {\n    char c = Serial.read();\n\n    // Velocidades adelante\n    if (c == '1') velActual = vel1;\n    if (c == '2') velActual = vel2;\n    if (c == '3') velActual = vel3;\n\n    // Velocidad atrás\n    if (c == '4') velActual = velAtras;\n\n    // Movimientos\n    if (c == 'a') avanzar();\n    if (c == 'p') detener();\n    if (c == 'r') retroceder();\n    if (c == 'i') izquierda();\n    if (c == 'd') derecha();\n  }\n\n  // Seguridad automática\n  if (distancia <= 5 && distancia > 0) {\n    detener();\n  }\n}`
             }
         };
 
@@ -596,63 +423,51 @@ void loop() {
 
         function enviarComando(c) {
             let comandoProcesado = c;
-            
             if (nivelActual === 2) {
                 comandoProcesado = c.toUpperCase();
             }
-
             registrarConsola(`&gt; Enviando carácter: '${comandoProcesado}'`);
 
             if (nivelActual === 1) {
-                if (comandoProcesado === 'a') actuarFisico("AVANZANDO");
-                if (comandoProcesado === 'r') actuarFisico("RETROCEDIENDO");
-                if (comandoProcesado === 'p') actuarFisico("DETENIDO");
-                
+                if (comandoProcesado === 'a') avanzarSimulacion();
+                if (comandoProcesado === 'r') retrocederSimulacion();
+                if (comandoProcesado === 'p') detenerSimulacion();
                 if (comandoProcesado === 'i' || comandoProcesado === 'd') {
-                    registrarConsola(`<span class="text-red-400">[Error] El nivel 1 no soporta comandos de giros 'i' o 'd'.</span>`);
+                    registrarConsola(`<span class="text-red-400">[Error] El nivel 1 no soporta giros laterales.</span>`);
                 }
             } 
             else if (nivelActual === 2) {
-                if (comandoProcesado === 'A') {
-                    actuarFisico("AVANZANDO");
-                    registrarConsola(`<span class="text-yellow-300">&gt;&gt; Avanzando</span>`);
-                }
-                if (comandoProcesado === 'R') {
-                    actuarFisico("RETROCEDIENDO");
-                    registrarConsola(`<span class="text-yellow-300">&gt;&gt; Retrocediendo</span>`);
-                }
-                if (comandoProcesado === 'P') {
-                    actuarFisico("DETENIDO");
-                    registrarConsola(`<span class="text-yellow-300">&gt;&gt; Detenido</span>`);
-                }
+                if (comandoProcesado === 'A') { avanzarSimulacion(); registrarConsola(`<span class="text-yellow-300">&gt;&gt; Avanzando</span>`); }
+                if (comandoProcesado === 'R') { retrocederSimulacion(); registrarConsola(`<span class="text-yellow-300">&gt;&gt; Retrocediendo</span>`); }
+                if (comandoProcesado === 'P') { detenerSimulacion(); registrarConsola(`<span class="text-yellow-300">&gt;&gt; Detenido</span>`); }
                 if (comandoProcesado === 'I' || comandoProcesado === 'D') {
-                    registrarConsola(`<span class="text-red-400">[Error] El nivel 2 no soporta giros laterales. ¡Usa el nivel 3!</span>`);
+                    registrarConsola(`<span class="text-red-400">[Error] El nivel 2 no soporta giros laterales.</span>`);
                 }
             } 
             else if (nivelActual === 3) {
                 if (comandoProcesado === 'a') {
                     if (distanciaObstaculo <= 5) {
                         registrarConsola(`<span class="text-red-400">[Bloqueo] Sensor detectó obstáculo cercano (<= 5cm).</span>`);
-                        actuarFisico("DETENIDO");
+                        detenerSimulacion();
                     } else {
-                        actuarFisico("AVANZANDO");
+                        avanzarSimulacion();
                     }
                 }
-                if (comandoProcesado === 'p') actuarFisico("DETENIDO");
-                if (comandoProcesado === 'r') actuarFisico("RETROCEDIENDO");
-                if (comandoProcesado === 'i') actuarFisico("IZQUIERDA");
-                if (comandoProcesado === 'd') actuarFisico("DERECHA");
-
-                if (comandoProcesado === '1') establecerVelocidad(1);
-                if (comandoProcesado === '2') establecerVelocidad(2);
-                if (comandoProcesado === '3') establecerVelocidad(3);
-                if (comandoProcesado === '4') establecerVelocidad(4);
+                if (comandoProcesado === 'p') detenerSimulacion();
+                if (comandoProcesado === 'r') retrocederSimulacion();
+                if (comandoProcesado === 'i') izquierdaSimulacion();
+                if (comandoProcesado === 'd') derechaSimulacion();
             }
         }
 
+        function avanzarSimulacion() { actuarFisico("AVANZANDO"); }
+        function retrocederSimulacion() { actuarFisico("RETROCEDIENDO"); }
+        function detenerSimulacion() { actuarFisico("DETENIDO"); }
+        function izquierdaSimulacion() { actuarFisico("IZQUIERDA"); }
+        function derechaSimulacion() { actuarFisico("DERECHA"); }
+
         function actuarFisico(estado) {
             estadoCoche = estado;
-            
             const coche = document.getElementById("coche-robot");
             const statusTxt = document.getElementById("coche-status");
             const ruedaI = document.getElementById("rueda-izq");
@@ -660,7 +475,6 @@ void loop() {
             const ledL = document.getElementById("led-l");
             const ledR = document.getElementById("led-r");
 
-            // Limpiar clases animadas
             ruedaI.className = "absolute -left-3 bottom-6 w-3 h-10 bg-slate-950 rounded-md transition-all";
             ruedaD.className = "absolute -right-3 bottom-6 w-3 h-10 bg-slate-950 rounded-md transition-all";
             ruedaI.style.animation = "none";
@@ -673,10 +487,8 @@ void loop() {
 
             if (estado === "AVANZANDO") {
                 statusTxt.className = "bg-green-600 px-2 py-0.5 rounded text-[10px] font-bold text-white tracking-wider animate-pulse";
-                ruedaI.classList.add("border-green-400", "border-t-2");
-                ruedaD.classList.add("border-green-400", "border-t-2");
-                ruedaI.classList.add("animate-spin-custom");
-                ruedaD.classList.add("animate-spin-custom");
+                ruedaI.classList.add("border-green-400", "border-t-2", "animate-spin-custom");
+                ruedaD.classList.add("border-green-400", "border-t-2", "animate-spin-custom");
                 coche.style.transform = "translateY(-8px)";
                 ledL.className = "w-2 h-2 rounded-full bg-green-500 shadow-md shadow-green-400";
                 ledR.className = "w-2 h-2 rounded-full bg-green-500 shadow-md shadow-green-400";
@@ -691,37 +503,28 @@ void loop() {
             } 
             else if (estado === "IZQUIERDA") {
                 statusTxt.className = "bg-yellow-600 px-2 py-0.5 rounded text-[10px] font-bold text-white tracking-wider";
-                ruedaD.classList.add("border-yellow-400", "border-t-2");
-                ruedaD.classList.add("animate-spin-custom");
+                ruedaD.classList.add("border-yellow-400", "border-t-2", "animate-spin-custom");
                 coche.style.transform = "rotate(-8deg)";
                 ledL.className = "w-2 h-2 rounded-full bg-yellow-400 shadow-md shadow-yellow-400 animate-ping";
             } 
             else if (estado === "DERECHA") {
                 statusTxt.className = "bg-yellow-600 px-2 py-0.5 rounded text-[10px] font-bold text-white tracking-wider";
-                ruedaI.classList.add("border-yellow-400", "border-t-2");
-                ruedaI.classList.add("animate-spin-custom");
+                ruedaI.classList.add("border-yellow-400", "border-t-2", "animate-spin-custom");
                 coche.style.transform = "rotate(8deg)";
                 ledR.className = "w-2 h-2 rounded-full bg-yellow-400 shadow-md shadow-yellow-400 animate-ping";
-            } 
-            else {
-                statusTxt.className = "bg-slate-950 px-2 py-0.5 rounded text-[10px] font-bold text-slate-400 tracking-wider";
             }
         }
 
-        function forzarDetener() {
-            actuarFisico("DETENIDO");
-        }
+        function forzarDetener() { actuarFisico("DETENIDO"); }
 
         function establecerVelocidad(nivelVel) {
             for(let i = 1; i <= 3; i++) {
                 document.getElementById(`btn-vel-${i}`).className = "px-3 py-1 bg-slate-800 text-xs rounded-lg text-slate-400 hover:bg-slate-700 border border-slate-700 transition-all font-mono";
             }
-            
             let pwm = 180;
             if (nivelVel === 1) { pwm = 120; document.getElementById("btn-vel-1").className = "px-3 py-1 bg-green-500/20 text-green-300 text-xs rounded-lg border border-green-500/30 transition-all font-mono"; }
             if (nivelVel === 2) { pwm = 180; document.getElementById("btn-vel-2").className = "px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-lg border border-blue-500/30 transition-all font-mono"; }
             if (nivelVel === 3) { pwm = 255; document.getElementById("btn-vel-3").className = "px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-lg border border-purple-500/30 transition-all font-mono"; }
-
             velocidadActual = pwm;
             registrarConsola(`&gt;&gt; Velocidad PWM: <b>${pwm}</b>`);
         }
@@ -729,15 +532,12 @@ void loop() {
         function cambiarDistancia(val) {
             distanciaObstaculo = val;
             document.getElementById("sim-dist-value").innerText = `${val} cm`;
-            
             if(nivelActual === 3) {
                 registrarConsola(`Distancia: ${val} cm`);
-                
                 if (val <= 5 && val > 0) {
                     document.getElementById("alerta-dist-txt").innerText = val;
                     document.getElementById("alerta-choque").classList.remove("hidden");
-                    actuarFisico("DETENIDO");
-                    registrarConsola(`<span class="text-red-400 font-bold">&gt;&gt; SEGURIDAD: Obstáculo muy cerca (${val} cm). Detenido.</span>`);
+                    detenerSimulacion();
                 } else {
                     document.getElementById("alerta-choque").classList.add("hidden");
                 }
@@ -764,21 +564,12 @@ void loop() {
             textArea.value = textToCopy;
             document.body.appendChild(textArea);
             textArea.select();
-            
             try {
                 document.execCommand('copy');
                 const copyBtnText = document.getElementById("copy-btn-text");
                 copyBtnText.innerText = "¡Copiado!";
-                copyBtnText.classList.add("text-green-400");
-                
-                setTimeout(() => {
-                    copyBtnText.innerText = "Copiar Código";
-                    copyBtnText.classList.remove("text-green-400");
-                }, 2000);
-            } catch (err) {
-                console.error('No se pudo copiar: ', err);
-            }
-            
+                setTimeout(() => { copyBtnText.innerText = "Copiar Código"; }, 2000);
+            } catch (err) {}
             document.body.removeChild(textArea);
         }
 
